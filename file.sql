@@ -40,14 +40,14 @@ SELECT COUNT(*)
 FROM `departments`;
 
 -- Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
-SELECT * 
+SELECT COUNT(`id`) 
 FROM `teachers` 
 WHERE `phone` IS NULL;
 
 -- Inserire nella tabella degli studenti un nuovo record con i propri dati 
 -- (per il campo degree_id, inserire un valore casuale)
-INSERT INTO students (id, degree_id, name, surname, date_of_birth, fiscal_code, enrolment_date, registration_number, email) 
-VALUES (5001, 38, 'Daniele', 'Checchin', '1997/02/26', 'CHCDNL97B26G224O', '2022/11/24', 491262, 'dani@gmail.com' );
+INSERT INTO students (degree_id, name, surname, date_of_birth, fiscal_code, enrolment_date, registration_number, email) 
+VALUES (38, 'Daniele', 'Checchin', '1997/02/26', 'CHCDNL97B26G224O', '2022/11/24', 491262, 'dani@gmail.com' );
 
 -- Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
 UPDATE teachers 
